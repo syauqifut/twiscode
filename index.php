@@ -15,8 +15,16 @@ switch ($request) {
     case $url . '/bindec':
         require "bindec.php";
         break;
+    case $url . '/palindrome':
+        require "palindrome.php";
+        break;
     default:
         http_response_code(404);
-        require "template.php";
+        // require "template.php";
+        echo "
+        /edcbin <br/>
+        /bindec <br/>
+        /palindrome <br/>
+        ";
         break;
 }
